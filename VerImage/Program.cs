@@ -15,7 +15,7 @@ namespace VerImage
     {
         static void Main(string[] args)
         {
-            string directoryPath = @"C:\Users\Public\Pictures\Leila\Searched Partition #1 (395429)";
+            string directoryPath = @"CAMINHO DA PASTA COM AS FOTOS";
             var varredura = new Varredura();
             varredura.verificaYolo10(directoryPath);
         }
@@ -30,7 +30,7 @@ namespace VerImage
             // Instantiate a new Yolo object
             using var yolo = new Yolo(new YoloOptions
             {
-                OnnxModel = @"C:\Users\henri\source\repos\VerImage\VerImage\Assets\yolov10s.onnx",      // Your Yolov8 or Yolov10 model in onnx format
+                OnnxModel = @"CAMINHO PARA O YOLO\yolov10s.onnx", // Your Yolov8 or Yolov10 model in onnx format
                 ModelType = ModelType.ObjectDetection, // Model type
                 Cuda = false, // Use CPU or CUDA for GPU accelerated inference. Default = true
                 GpuId = 0, // Select Gpu by id. Default = 0
@@ -109,8 +109,7 @@ namespace VerImage
         public void VerificarImagensAsync(string directoryPath)
         {
             // Caminho para o modelo YOLO
-            //string modelPath = @"C:\Users\henri\source\repos\VerImage\VerImage\Assets\yolov5s.onnx";
-            string modelPath = @"C:\Users\henri\source\repos\VerImage\VerImage\Assets\yolov8m.onnx";
+            string modelPath = @"C:CAMINHO PARA O YOLO\yolov8m.onnx";
 
             // Carrega o modelo YOLO
             //using var scorer = new YoloScorer<YoloCocoP5Model>(modelPath);
